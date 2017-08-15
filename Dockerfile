@@ -1,7 +1,10 @@
 FROM ubuntu:latest
 RUN \
 apt-get update && apt-get install -y \
-wget 
+wget \
+build-essential \
+libxslt-dev \
+libxml2-dev
 
 ENV SRC /opt
 ENV BIN /usr/local/bin
