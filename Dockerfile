@@ -15,6 +15,7 @@ RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/1.2.0/ncbi-magi
 	tar -xzvf ncbi-magicblast-1.2.0-x64-linux.tar.gz && \
 	cd ncbi-magicblast-1.2.0/bin/ && \
 	wget https://helix.nih.gov/~tsang/magicblast13 && \
+	chmod 777 magicblast13 && \
 	cp -rf  *  $BIN
 
 COPY Dockerfile /opt/Dockerfile
